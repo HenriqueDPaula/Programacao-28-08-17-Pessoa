@@ -42,7 +42,7 @@ public class Main {
 				Date dtNascimento = null;
 				for (Pessoa pessoa : listaPessoas) {
 					System.out.print(preencherComZeros(pessoa.getNome(), 30) );
-					System.out.print(preencherComZeros(pessoa.getSexo(), 10) );
+					System.out.print(preencherComZeros(pessoa.getSexo().toUpperCase(), 10) );
 					
 					System.out.print( Util.formataData( pessoa.getDataNascimento() ) );
 					
