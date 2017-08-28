@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Util {
 	
-	public static final String PADRAO_DATA = "dd/MM/yyyy EEE";
+	public static final String PADRAO_DATA = "dd/MM/yyyy";
 	
 	public static Date formataData(String dataFormatoString) throws ParseException
 	{
@@ -17,7 +17,7 @@ public class Util {
 	public static String formataData(Date dataFormatoString) throws ParseException
 	{
 		SimpleDateFormat sdf = new SimpleDateFormat(PADRAO_DATA);
-		return new SimpleDateFormat(PADRAO_DATA).format(dataFormatoString);
+		return new SimpleDateFormat( "dd/MM/yyyy EEE").format(dataFormatoString);
 	} 
 
 }
