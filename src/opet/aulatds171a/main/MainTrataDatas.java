@@ -1,3 +1,5 @@
+package opet.aulatds171a.main;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,7 +24,7 @@ public class MainTrataDatas {
 	public static final Locale PAIS_OPET = new Locale("pt", "BR");
 
 	/**
-	 * metodo responsavel por lançar o java application
+	 * metodo responsavel por lanï¿½ar o java application
 	 * 
 	 * @param args
 	 */
@@ -56,8 +58,8 @@ public class MainTrataDatas {
 		}
 
 		try {
-			// tenta criar uma data via formatador, como a data é invalida
-			// deverá lançar uma exception
+			// tenta criar uma data via formatador, como a data ï¿½ invalida
+			// deverï¿½ lanï¿½ar uma exception
 			System.out.println("Data via SimpleDateFormat para dar erro na formatacao");
 			dataAtual = sdf.parse("22/13/2016");
 			System.out.println(sdf.format(dataAtual));
@@ -81,9 +83,9 @@ public class MainTrataDatas {
 		System.out.println(sdf.format(dataAtual));
 
 		try {
-			// tenta criar uma data (que aparentemente é valida) porem
+			// tenta criar uma data (que aparentemente ï¿½ valida) porem
 			// nao esta no formato definido para o formatador: "dd/MM/yyyy EEE"
-			// assim deverá lançar exception
+			// assim deverï¿½ lanï¿½ar exception
 			System.out.println("Data via SimpleDateFormat para fazer o parser e dar erro");
 			dataAtual = sdf.parse("22/10/2016");
 		} catch (ParseException e1) {
@@ -126,20 +128,20 @@ public class MainTrataDatas {
 		}
 
 		// vai mostar como utilizar a classe Calendar para tratar datas.
-		// essa classe é utilizada em conjunto com a Date e a SimpleDateFormat e
+		// essa classe ï¿½ utilizada em conjunto com a Date e a SimpleDateFormat e
 		// a DateFormat
 
 		// recupera um calendario/data do sistema
 		Calendar calendar = Calendar.getInstance();
-		// seta para NAO permitir ajustes caso de datas inválidas
+		// seta para NAO permitir ajustes caso de datas invï¿½lidas
 		calendar.setLenient(false);
 		System.out.println("Data atual via Calendar.getInstance()");
-		// transforma a data que está em calendar para um objeto do tipo Date()
+		// transforma a data que estï¿½ em calendar para um objeto do tipo Date()
 		dataAtual = calendar.getTime();
 		System.out.println(sdf.format(dataAtual));
 
 		// vai setar uma data para o calendar
-		// Atencao porque o mes (11 é dezembro) inicia em zero
+		// Atencao porque o mes (11 ï¿½ dezembro) inicia em zero
 		try {
 			calendar.set(1999, Calendar.DECEMBER, 23);
 		} catch (Exception e) {
