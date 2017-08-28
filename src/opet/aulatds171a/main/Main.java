@@ -4,8 +4,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+
 import opet.aulatds171a.pessoa.Pessoa;
 import opet.aulatds171a.utilitario.Leitor;
+import opet.aulatds171a.utilitario.Util;
 
 public class Main {
 	
@@ -17,7 +19,7 @@ public class Main {
 	 * @param args
 	 * @throws ParseException 
 	 */
-	public static void main(String[] args)  {
+	public static void main(String[] args) throws ParseException  {
 		
 		ArrayList<Pessoa> listaPessoas = new ArrayList<Pessoa>();
 		int opcao_menu = -1;
@@ -37,10 +39,14 @@ public class Main {
 				preencherComZeros("Nome", 30);
 				preencherComZeros("Sexo", 10);
 				preencherComZeros("Data Nascimento", 50);
+				Date dtNascimento = null;
 				for (Pessoa pessoa : listaPessoas) {
 					System.out.print(preencherComZeros(pessoa.getNome(), 30) );
 					System.out.print(preencherComZeros(pessoa.getSexo(), 10) );
-					System.out.print( pessoa.getDataNascimento());
+					
+					System.out.print( Util.formataData( pessoa.getDataNascimento() ) );
+					
+					//System.out.print( dtNascimento  );
 					System.out.println("");
 				}
 			}
