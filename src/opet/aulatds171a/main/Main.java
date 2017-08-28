@@ -4,12 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.LinkedList;
-import java.util.Vector;
-
 import opet.aulatds171a.pessoa.Pessoa;
 import opet.aulatds171a.utilitario.Leitor;
-import sun.java2d.pipe.SpanShapeRenderer.Simple;
 
 public class Main {
 	
